@@ -252,8 +252,8 @@
     }
 
     .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 16px;
     }
 
@@ -262,11 +262,13 @@
       overflow: hidden;
       background: #000;
       box-shadow: var(--shadow-sm);
+      width: 220px;
+      flex-shrink: 0;
     }
 
     .video-card iframe {
-      width: 100%;
-      aspect-ratio: 9 / 16;
+      width: 220px;
+      height: 390px;
       display: block;
       border: none;
     }
