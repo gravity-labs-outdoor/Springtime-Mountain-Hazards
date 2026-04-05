@@ -6,9 +6,9 @@
   <title>Springtime Mountain Hazards – Presidential Range, NH</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
+ 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     :root {
       --color-bg: #fafafa;
       --color-surface: #ffffff;
@@ -24,7 +24,7 @@
       --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
       --transition: 0.25s ease;
     }
-
+ 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--color-bg);
@@ -32,19 +32,19 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
-
+ 
     .widget-container {
       max-width: 960px;
       margin: 0 auto;
       padding: 24px 20px;
     }
-
+ 
     /* ---- HEADER ---- */
     .widget-header {
       text-align: center;
       margin-bottom: 32px;
     }
-
+ 
     .widget-header h1 {
       font-size: 1.75rem;
       font-weight: 700;
@@ -52,14 +52,14 @@
       margin-bottom: 8px;
       letter-spacing: -0.02em;
     }
-
+ 
     .widget-header .subtitle {
       font-size: 0.95rem;
       color: var(--color-text-secondary);
       max-width: 640px;
       margin: 0 auto;
     }
-
+ 
     /* ---- OVERVIEW ---- */
     .overview-section {
       background: var(--color-surface);
@@ -69,19 +69,19 @@
       margin-bottom: 28px;
       box-shadow: var(--shadow-sm);
     }
-
+ 
     .overview-section h2 {
       font-size: 1.1rem;
       font-weight: 600;
       margin-bottom: 12px;
       color: var(--color-accent);
     }
-
+ 
     .overview-section p {
       font-size: 0.925rem;
       color: var(--color-text-secondary);
     }
-
+ 
     /* ---- TABS ---- */
     .tabs-wrapper {
       background: var(--color-surface);
@@ -91,78 +91,86 @@
       overflow: hidden;
       margin-bottom: 28px;
     }
-
+ 
     .tab-bar {
       display: flex;
-      border-bottom: 1px solid var(--color-border);
+      background: #f0f3f7;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
+      padding: 8px 8px 0 8px;
+      gap: 4px;
     }
-
+ 
     .tab-bar::-webkit-scrollbar { display: none; }
-
+ 
     .tab-btn {
       flex: 1;
       min-width: 0;
-      padding: 14px 10px;
+      padding: 12px 14px;
       font-family: inherit;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--color-text-secondary);
-      background: transparent;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #6a7f96;
+      background: #dce3ec;
       border: none;
-      border-bottom: 2.5px solid transparent;
+      border-radius: 6px 6px 0 0;
       cursor: pointer;
-      transition: color var(--transition), border-color var(--transition), background var(--transition);
+      transition: color var(--transition), background var(--transition), box-shadow var(--transition);
       white-space: nowrap;
       text-align: center;
+      letter-spacing: 0.01em;
     }
-
+ 
     .tab-btn:hover {
+      background: #cdd6e2;
       color: var(--color-accent);
-      background: var(--color-accent-light);
     }
-
+ 
     .tab-btn.active {
+      background: #ffffff;
       color: var(--color-accent);
-      border-bottom-color: var(--color-accent);
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 -2px 0 var(--color-accent) inset;
     }
-
-    .tab-icon {
-      display: block;
-      font-size: 1.3rem;
-      margin-bottom: 4px;
-    }
-
+ 
     /* ---- TAB CONTENT ---- */
     .tab-content {
       display: none;
       padding: 28px;
       animation: fadeIn 0.3s ease;
     }
-
+ 
     .tab-content.active { display: block; }
-
+ 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
+ 
     .tab-content h3 {
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 14px;
       color: var(--color-text);
     }
-
+ 
+    .tab-hero-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      margin-bottom: 18px;
+      display: block;
+    }
+ 
     .tab-content p {
       font-size: 0.925rem;
       color: var(--color-text-secondary);
       margin-bottom: 16px;
     }
-
+ 
     /* Mitigation box */
     .mitigation-box {
       background: var(--color-accent-light);
@@ -171,7 +179,7 @@
       padding: 18px 20px;
       margin: 20px 0;
     }
-
+ 
     .mitigation-box h4 {
       font-size: 0.85rem;
       font-weight: 600;
@@ -180,19 +188,19 @@
       color: var(--color-accent);
       margin-bottom: 8px;
     }
-
+ 
     .mitigation-box ul {
       list-style: none;
       padding: 0;
     }
-
+ 
     .mitigation-box li {
       font-size: 0.9rem;
       color: var(--color-text-secondary);
       padding: 4px 0 4px 20px;
       position: relative;
     }
-
+ 
     .mitigation-box li::before {
       content: '✓';
       position: absolute;
@@ -200,7 +208,7 @@
       color: var(--color-accent);
       font-weight: 700;
     }
-
+ 
     /* Warning callout (for red flags) */
     .warning-box {
       background: var(--color-warning-bg);
@@ -209,7 +217,7 @@
       padding: 18px 20px;
       margin: 20px 0;
     }
-
+ 
     .warning-box h4 {
       font-size: 0.85rem;
       font-weight: 600;
@@ -218,30 +226,30 @@
       color: var(--color-warning);
       margin-bottom: 8px;
     }
-
+ 
     .warning-box ul {
       list-style: none;
       padding: 0;
     }
-
+ 
     .warning-box li {
       font-size: 0.9rem;
       color: var(--color-text-secondary);
       padding: 4px 0 4px 20px;
       position: relative;
     }
-
+ 
     .warning-box li::before {
       content: '⚠';
       position: absolute;
       left: 0;
     }
-
+ 
     /* Videos grid */
     .videos-section {
       margin-top: 24px;
     }
-
+ 
     .videos-section h4 {
       font-size: 0.85rem;
       font-weight: 600;
@@ -250,29 +258,30 @@
       color: var(--color-text);
       margin-bottom: 12px;
     }
-
+ 
     .video-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
+      justify-content: center;
     }
-
+ 
     .video-card {
       border-radius: var(--radius);
       overflow: hidden;
       background: #000;
       box-shadow: var(--shadow-sm);
-      width: 220px;
+      width: 300px;
       flex-shrink: 0;
     }
-
+ 
     .video-card iframe {
-      width: 220px;
-      height: 390px;
+      width: 300px;
+      height: 533px;
       display: block;
       border: none;
     }
-
+ 
     .video-card .video-label {
       background: var(--color-surface);
       padding: 10px 14px;
@@ -280,34 +289,61 @@
       font-weight: 500;
       color: var(--color-text-secondary);
     }
-
+ 
     /* Example links (non-video) */
     .example-links {
-      margin-top: 12px;
+      margin-top: 16px;
+      background: #f5f7fa;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
     }
-
+ 
+    .example-links-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-secondary);
+      margin-bottom: 10px;
+    }
+ 
     .example-links a {
-      display: inline-block;
-      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
       color: var(--color-accent);
       text-decoration: none;
-      padding: 5px 12px;
-      border: 1px solid var(--color-border);
-      border-radius: 20px;
-      margin: 4px 4px 4px 0;
-      transition: background var(--transition), border-color var(--transition);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--color-border);
+      transition: color var(--transition);
     }
-
+ 
+    .example-links a:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+ 
+    .example-links a:first-of-type {
+      padding-top: 0;
+    }
+ 
+    .example-links a::before {
+      content: '→';
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+ 
     .example-links a:hover {
-      background: var(--color-accent-light);
-      border-color: var(--color-accent);
+      color: #1a4f75;
     }
-
+ 
     /* Resource links */
     .resource-links {
       margin-top: 16px;
     }
-
+ 
     .resource-links h4 {
       font-size: 0.85rem;
       font-weight: 600;
@@ -316,7 +352,7 @@
       color: var(--color-text);
       margin-bottom: 8px;
     }
-
+ 
     .resource-links a {
       display: inline-block;
       font-size: 0.85rem;
@@ -328,12 +364,12 @@
       margin: 4px 4px 4px 0;
       transition: background var(--transition), border-color var(--transition);
     }
-
+ 
     .resource-links a:hover {
       background: var(--color-accent-light);
       border-color: var(--color-accent);
     }
-
+ 
     /* ---- PHOTO OVERLAY PLACEHOLDER ---- */
     .photo-overlay-section {
       background: var(--color-surface);
@@ -343,7 +379,7 @@
       overflow: hidden;
       margin-bottom: 28px;
     }
-
+ 
     .photo-overlay-placeholder {
       position: relative;
       background: linear-gradient(135deg, #dde8f0 0%, #c3d5e3 100%);
@@ -356,18 +392,18 @@
       text-align: center;
       padding: 40px 24px;
     }
-
+ 
     .photo-overlay-placeholder .mountain-icon {
       font-size: 3rem;
       opacity: 0.5;
     }
-
+ 
     .photo-overlay-placeholder p {
       font-size: 0.95rem;
       color: #4a6a80;
       font-weight: 500;
     }
-
+ 
     .photo-overlay-placeholder .coming-soon-badge {
       display: inline-block;
       background: rgba(255,255,255,0.7);
@@ -379,7 +415,7 @@
       letter-spacing: 0.06em;
       color: var(--color-accent);
     }
-
+ 
     /* ---- FOOTER ---- */
     .widget-footer {
       text-align: center;
@@ -387,12 +423,12 @@
       font-size: 0.78rem;
       color: #999;
     }
-
+ 
     .widget-footer a {
       color: var(--color-accent);
       text-decoration: none;
     }
-
+ 
     /* ---- RESPONSIVE ---- */
     @media (max-width: 640px) {
       .widget-container { padding: 16px 12px; }
@@ -406,15 +442,15 @@
   </style>
 </head>
 <body>
-
+ 
 <div class="widget-container">
-
+ 
   <!-- Header -->
   <div class="widget-header">
     <h1>Springtime Mountain Hazards</h1>
     <p class="subtitle">A guide to identifying and mitigating seasonal hazards in the Presidential Range, New Hampshire</p>
   </div>
-
+ 
   <!-- Overview -->
   <div class="overview-section">
     <h2>Overview</h2>
@@ -422,49 +458,38 @@
       As winter transitions to spring each year, warmer temperatures, stronger sunlight, and the shift from snow to rain create a new set of mountain hazards. Though the threat of avalanches begins to decrease, these springtime hazards are just as dangerous and have contributed to hundreds of accidents and near-misses over the years. Knowing how to identify, plan for, and avoid these hazards can greatly reduce your risk when traveling in the mountains.
     </p>
   </div>
-
-  <!-- Interactive Photo Overlay Placeholder -->
-  <div class="photo-overlay-section">
-    <div class="photo-overlay-placeholder">
-      <div class="mountain-icon">🏔️</div>
-      <p>Interactive Hazard Map</p>
-      <span class="coming-soon-badge">Coming Soon</span>
-      <p style="font-size: 0.82rem; opacity: 0.7; max-width: 400px;">
-        An interactive photo overlay showing where each hazard occurs in the terrain, so you can visualize the dangers before heading out.
-      </p>
-    </div>
-  </div>
-
+ 
   <!-- Tabs Widget -->
   <div class="tabs-wrapper">
     <div class="tab-bar" role="tablist">
-      <button class="tab-btn active" role="tab" data-tab="icefall" aria-selected="true">
-        <span class="tab-icon">🧊</span>Icefall &amp; Rockfall
-      </button>
-      <button class="tab-btn" role="tab" data-tab="glide" aria-selected="false">
-        <span class="tab-icon">🕳️</span>Glide Cracks
-      </button>
-      <button class="tab-btn" role="tab" data-tab="refrozen" aria-selected="false">
-        <span class="tab-icon">❄️</span>Refrozen Snow
-      </button>
-      <button class="tab-btn" role="tab" data-tab="undermined" aria-selected="false">
-        <span class="tab-icon">💧</span>Undermined Snow
-      </button>
-      <button class="tab-btn" role="tab" data-tab="wet" aria-selected="false">
-        <span class="tab-icon">🌊</span>Wet Avalanches
-      </button>
+      <button class="tab-btn active" role="tab" data-tab="icefall" aria-selected="true">Icefall &amp; Rockfall</button>
+      <button class="tab-btn" role="tab" data-tab="glide" aria-selected="false">Glide Cracks</button>
+      <button class="tab-btn" role="tab" data-tab="refrozen" aria-selected="false">Refrozen Snow</button>
+      <button class="tab-btn" role="tab" data-tab="undermined" aria-selected="false">Undermined Snow</button>
+      <button class="tab-btn" role="tab" data-tab="wet" aria-selected="false">Wet Avalanches</button>
     </div>
-
+ 
     <!-- Icefall & Rockfall -->
     <div class="tab-content active" id="tab-icefall" role="tabpanel">
       <h3>Icefall &amp; Rockfall</h3>
+      <img class="tab-hero-img" src="https://www.mountwashingtonavalanchecenter.org/wp-content/uploads/2023/04/0320161041a-2048x1152-3-1200x675.jpg" alt="Icefall and rockfall in Tuckerman Ravine" />
       <p>
         As the mountains experience numerous freeze/thaw cycles, melting ice, and water runoff from snowmelt, falling ice and falling rock are commonly associated phenomena. Falling pieces can range from the size of a golf ball to the size of a car, weighing many tons and reaching speeds over 60 mph. This hazard is difficult to predict and can have deadly consequences for anyone in the fall line.
       </p>
       <p>
         "Lunch Rocks" is one of the most dangerous places in Tuckerman Ravine in the spring due to icefall exposure, but this hazard is possible anywhere with steep slopes and exposed ice or rock overhead.
       </p>
-
+ 
+      <div class="warning-box">
+        <h4>Red Flags</h4>
+        <ul>
+          <li>Audible dripping or rushing water on overhead ice or rock faces, indicating active melt and instability.</li>
+          <li>Fresh debris (ice chunks or rock fragments) visible on the slope below a cliff band, indicating recent activity.</li>
+          <li>Persistently warm temperatures or rapidly rising temperatures, especially combined with direct sunlight.</li>
+          <li>Other parties traveling above you on ice or rock, as their movement could trigger a release.</li>
+        </ul>
+      </div>
+ 
       <div class="mitigation-box">
         <h4>Identification &amp; Mitigation</h4>
         <ul>
@@ -474,7 +499,7 @@
           <li>Wear a helmet in steep terrain.</li>
         </ul>
       </div>
-
+ 
       <div class="videos-section">
         <h4>Examples</h4>
         <div class="video-grid">
@@ -484,22 +509,34 @@
           </div>
         </div>
         <div class="example-links">
-          <a href="https://www.mountwashingtonavalanchecenter.org/hit-by-falling-ice/" target="_blank" rel="noopener">Icefall at "Lunch Rocks" ↗</a>
-          <a href="https://www.mountainproject.com/photo/110838816" target="_blank" rel="noopener">Rockfall on Mechanic's Route ↗</a>
+          <div class="example-links-label">Reports &amp; Examples</div>
+          <a href="https://www.mountwashingtonavalanchecenter.org/hit-by-falling-ice/" target="_blank" rel="noopener">Icefall at "Lunch Rocks"</a>
+          <a href="https://www.mountainproject.com/photo/110838816" target="_blank" rel="noopener">Rockfall on Mechanic's Route</a>
         </div>
       </div>
     </div>
-
+ 
     <!-- Glide Cracks / Snow Holes -->
     <div class="tab-content" id="tab-glide" role="tabpanel">
       <h3>Glide Cracks &amp; Snow Holes</h3>
+      <img class="tab-hero-img" src="https://www.mountwashingtonavalanchecenter.org/wp-content/uploads/2023/04/PXL_20210508_171325636.NIGHT_-1030x772-1.jpg" alt="Glide crack and snow hole in the snowpack" />
       <p>
         As warm temperatures, rain, and water runoff continuously melt snow during spring, it is common for large and deep holes and cracks to form in the snowpack. These form through concentrated water runoff, snow becoming undermined from below, and from snowpack creep and separation. These openings can be very deep and large enough for a person to fall into, and in most cases there is no reasonable exit until the snow completely melts.
       </p>
       <p>
         Sometimes resembling crevasses found on glaciers, these features have been a factor in several serious accidents over the years.
       </p>
-
+ 
+      <div class="warning-box">
+        <h4>Red Flags</h4>
+        <ul>
+          <li>Extended periods of above-freezing temperatures or rain, prime conditions for rapid formation.</li>
+          <li>Audible concentrated water rushing or falling nearby, indicating active drainage cutting through the snowpack.</li>
+          <li>Unusual dark shadows, depressions, or pits appearing in steep terrain you passed earlier in the season without issue.</li>
+          <li>Cracking or settling sounds underfoot near rocky terrain or drainage gullies.</li>
+        </ul>
+      </div>
+ 
       <div class="mitigation-box">
         <h4>Identification &amp; Mitigation</h4>
         <ul>
@@ -509,7 +546,7 @@
           <li>Fresh unsupportive snow can mask the openings, making them invisible from the surface.</li>
         </ul>
       </div>
-
+ 
       <div class="videos-section">
         <h4>Examples</h4>
         <div class="video-grid">
@@ -519,22 +556,34 @@
           </div>
         </div>
         <div class="example-links">
-          <a href="https://www.mountwashingtonavalanchecenter.org/crevasse-fall-fatality-tuckerman-ravine/" target="_blank" rel="noopener">Waterfall Hole Fatality Report ↗</a>
-          <a href="https://www.mountwashingtonavalanchecenter.org/near-miss-fall-into-waterfall-hole-tuckerman-ravine/" target="_blank" rel="noopener">Waterfall Hole Close Call ↗</a>
+          <div class="example-links-label">Reports &amp; Examples</div>
+          <a href="https://www.mountwashingtonavalanchecenter.org/crevasse-fall-fatality-tuckerman-ravine/" target="_blank" rel="noopener">Waterfall Hole Fatality Report</a>
+          <a href="https://www.mountwashingtonavalanchecenter.org/near-miss-fall-into-waterfall-hole-tuckerman-ravine/" target="_blank" rel="noopener">Waterfall Hole Close Call</a>
         </div>
       </div>
     </div>
-
+ 
     <!-- Refrozen Snow Surfaces -->
     <div class="tab-content" id="tab-refrozen" role="tabpanel">
       <h3>Refrozen Snow Surfaces</h3>
+      <img class="tab-hero-img" src="https://www.mountwashingtonavalanchecenter.org/wp-content/uploads/2023/04/PXL_20220220_174536607-2048x1152-1-1200x675.jpg" alt="Climber on refrozen snow surface in steep terrain" />
       <p>
         Spring snowpacks experience regular melt/freeze cycles. Dramatic temperature fluctuations affect snowpack hardness as temperatures rise above and fall below freezing. Intense sunshine can have a similar effect, softening snow when exposed to sun and refreezing it when shaded.
       </p>
       <p>
         When refrozen, the snow surface becomes very hard, icy, and slippery. In steep terrain, a fall can be impossible to stop or steer, and high-speed, long-sliding falls are a contributing factor in many accidents and near-misses every year.
       </p>
-
+ 
+      <div class="warning-box">
+        <h4>Red Flags</h4>
+        <ul>
+          <li>Cooling temperatures after a thaw or shade on a previously sunny slope.</li>
+          <li>Boots or skis with little or no penetration into a hard, icy snow surface.</li>
+          <li>The snow surface sounds glassy or hollow when tapped with a pole.</li>
+          <li>A slope that was previously soft and is now glazed over or hardened after cooling temperatures.</li>
+        </ul>
+      </div>
+ 
       <div class="mitigation-box">
         <h4>Identification &amp; Mitigation</h4>
         <ul>
@@ -544,7 +593,7 @@
           <li>Be aware of the limitations of self-arresting with an ice axe on hard, refrozen surfaces.</li>
         </ul>
       </div>
-
+ 
       <div class="videos-section">
         <h4>Examples</h4>
         <div class="video-grid">
@@ -554,29 +603,41 @@
           </div>
         </div>
         <div class="example-links">
-          <a href="https://www.mountwashingtonavalanchecenter.org/two-long-sliding-falls-on-a-frozen-spring-snowpack/" target="_blank" rel="noopener">Long Sliding Fall on Hillman's Highway ↗</a>
-          <a href="https://www.mountwashingtonavalanchecenter.org/two-long-sliding-falls-on-a-frozen-spring-snowpack/" target="_blank" rel="noopener">Long Sliding Fall in Chute, Tuckerman Ravine ↗</a>
+          <div class="example-links-label">Reports &amp; Examples</div>
+          <a href="https://www.mountwashingtonavalanchecenter.org/two-long-sliding-falls-on-a-frozen-spring-snowpack/" target="_blank" rel="noopener">Long Sliding Fall on Hillman's Highway</a>
+          <a href="https://www.mountwashingtonavalanchecenter.org/two-long-sliding-falls-on-a-frozen-spring-snowpack/" target="_blank" rel="noopener">Long Sliding Fall in Chute, Tuckerman Ravine</a>
         </div>
       </div>
-
+ 
       <div class="resource-links">
         <h4>Resources</h4>
-        <a href="https://www.mountwashington.org/experience-the-weather/higher-summit-forecast.aspx" target="_blank" rel="noopener">Higher Summits Forecast ↗</a>
-        <a href="https://forecast.weather.gov/MapClick.php?lat=44.27028000000007&lon=-71.30332999999996" target="_blank" rel="noopener">NWS Mt. Washington Forecast ↗</a>
-        <a href="https://blog.caltopo.com/2014/02/16/wheres-the-sun/" target="_blank" rel="noopener">CalTopo Sun Exposure ↗</a>
+        <a href="https://www.mountwashington.org/experience-the-weather/higher-summit-forecast.aspx" target="_blank" rel="noopener">Higher Summits Forecast</a>
+        <a href="https://forecast.weather.gov/MapClick.php?lat=44.27028000000007&lon=-71.30332999999996" target="_blank" rel="noopener">NWS Mt. Washington Forecast</a>
+        <a href="https://blog.caltopo.com/2014/02/16/wheres-the-sun/" target="_blank" rel="noopener">CalTopo Sun Exposure</a>
       </div>
     </div>
-
+ 
     <!-- Undermined Snow -->
     <div class="tab-content" id="tab-undermined" role="tabpanel">
       <h3>Undermined Snow</h3>
+      <img class="tab-hero-img" src="https://www.mountwashingtonavalanchecenter.org/wp-content/uploads/2023/04/5WOBUFQMTJE7LAGK4DXICGT5EM-2048x1536-1-1200x900.jpg" alt="Undermined snow over running water" />
       <p>
         As water runoff increases during spring, it directly melts adjacent snow and introduces warm air underneath, further accelerating the melting process. Over time, this undermines the snow from below. Collapses can happen suddenly, or a bridging effect may hold the weight of suspended snow for an extended period before failing.
       </p>
       <p>
         This hazard commonly forms where rivers, small streams, or runoff areas exist. A snow bridge could collapse on the first boot track or the 500th, and they can even collapse spontaneously.
       </p>
-
+ 
+      <div class="warning-box">
+        <h4>Red Flags</h4>
+        <ul>
+          <li>Visible sagging or a convex bulge in the snow surface over a drainage channel or streambed.</li>
+          <li>A route or crossing that felt solid in the morning may be significantly weaker by afternoon as daily melt accelerates runoff.</li>
+          <li>The tone underfoot shifts from solid to hollow as you step. Stop immediately and back off.</li>
+          <li>Late season (April and beyond) when snowmelt runoff increases significantly.</li>
+        </ul>
+      </div>
+ 
       <div class="mitigation-box">
         <h4>Identification &amp; Mitigation</h4>
         <ul>
@@ -586,35 +647,38 @@
           <li>Give obvious or suspected areas a wide margin. The timing of failure is unpredictable.</li>
         </ul>
       </div>
-
+ 
       <div class="videos-section">
         <h4>Examples</h4>
         <div class="example-links">
-          <a href="https://www.mountwashingtonavalanchecenter.org/water-immersion-little-headwall/" target="_blank" rel="noopener">Undermined Snow Accident — Little Headwall ↗</a>
-          <a href="https://www.mountwashingtonavalanchecenter.org/skier-fall-through-snow-bridge-john-sherburne-ski-trail/" target="_blank" rel="noopener">Undermined Snow Accident — Sherburne Ski Trail ↗</a>
+          <div class="example-links-label">Reports &amp; Examples</div>
+          <a href="https://www.mountwashingtonavalanchecenter.org/water-immersion-little-headwall/" target="_blank" rel="noopener">Undermined Snow Accident — Little Headwall</a>
+          <a href="https://www.mountwashingtonavalanchecenter.org/skier-fall-through-snow-bridge-john-sherburne-ski-trail/" target="_blank" rel="noopener">Undermined Snow Accident — Sherburne Ski Trail</a>
         </div>
       </div>
     </div>
-
+ 
     <!-- Wet Avalanches -->
     <div class="tab-content" id="tab-wet" role="tabpanel">
       <h3>Wet Avalanches</h3>
+      <img class="tab-hero-img" src="https://www.mountwashingtonavalanchecenter.org/wp-content/uploads/2023/04/Klementovich-20130419-JCK_1137-1200x801.jpg" alt="Wet avalanche running in Tuckerman Ravine" />
       <p>
         Wet avalanches occur when free water decreases the strength of the snow. They can occur as a cohesive slab or as loose, saturated snow struggling to stick to the surface. Though these avalanches typically move slower than dry snow avalanches, the heavy weight of saturated snow makes them very powerful and sometimes difficult to escape.
       </p>
       <p>
         As spring progresses, regular loose wet avalanches and sluffs eat away at the snowpack and create deep runnels or trenches, adding an additional obstacle for skiers and climbers.
       </p>
-
+ 
       <div class="warning-box">
         <h4>Red Flags</h4>
         <ul>
-          <li>Rain falling on snow, especially on dry snow.</li>
-          <li>Warming above freezing, especially the first warming of previously dry snow.</li>
-          <li>Loose wet avalanches indicate warming; destructive wet slab avalanches may be possible.</li>
+          <li>Rain falling on snow, especially on a previously dry snowpack — free water degrades strength rapidly.</li>
+          <li>Snowballs or pinwheels rolling spontaneously on steep slopes, or wet debris visible at the base of a run.</li>
+          <li>Corn snow that has turned to mush and can no longer support your weight — the snowpack is saturated.</li>
+          <li>Afternoon hours after prolonged strong sun, when solar radiation has had time to penetrate deep into the snowpack.</li>
         </ul>
       </div>
-
+ 
       <div class="mitigation-box">
         <h4>Identification &amp; Mitigation</h4>
         <ul>
@@ -624,51 +688,52 @@
           <li>Expect loose wet avalanches to have significant power when moving across your path; try to avoid the main flow.</li>
         </ul>
       </div>
-
+ 
       <div class="videos-section">
         <h4>Examples</h4>
         <div class="example-links">
-          <a href="https://mwacarchived.wpenginepowered.com/all-observations/entry/5784/" target="_blank" rel="noopener">Wet Slab Avalanche ↗</a>
-          <a href="https://mwacarchived.wpenginepowered.com/all-observations/entry/5437/" target="_blank" rel="noopener">Wet Loose Avalanche ↗</a>
+          <div class="example-links-label">Reports &amp; Examples</div>
+          <a href="https://mwacarchived.wpenginepowered.com/all-observations/entry/5784/" target="_blank" rel="noopener">Wet Slab Avalanche</a>
+          <a href="https://mwacarchived.wpenginepowered.com/all-observations/entry/5437/" target="_blank" rel="noopener">Wet Loose Avalanche</a>
         </div>
       </div>
     </div>
   </div>
-
+ 
   <!-- Footer -->
   <div class="widget-footer">
     Content sourced from <a href="https://www.mountwashingtonavalanchecenter.org" target="_blank" rel="noopener">Mount Washington Avalanche Center</a>
   </div>
-
+ 
 </div>
-
+ 
 <script>
   // Tab switching
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tabContents = document.querySelectorAll('.tab-content');
-
+ 
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.getAttribute('data-tab');
-
+ 
       tabBtns.forEach(b => {
         b.classList.remove('active');
         b.setAttribute('aria-selected', 'false');
       });
       tabContents.forEach(c => c.classList.remove('active'));
-
+ 
       btn.classList.add('active');
       btn.setAttribute('aria-selected', 'true');
       document.getElementById('tab-' + target).classList.add('active');
     });
   });
-
+ 
   // Keyboard navigation for tabs
   const tabBar = document.querySelector('.tab-bar');
   tabBar.addEventListener('keydown', (e) => {
     const tabs = Array.from(tabBtns);
     const currentIndex = tabs.indexOf(document.activeElement);
-
+ 
     if (e.key === 'ArrowRight') {
       e.preventDefault();
       const next = (currentIndex + 1) % tabs.length;
@@ -682,6 +747,6 @@
     }
   });
 </script>
-
+ 
 </body>
 </html>
