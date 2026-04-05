@@ -6,9 +6,9 @@
   <title>Springtime Mountain Hazards – Presidential Range, NH</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
- 
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
     :root {
       --color-bg: #fafafa;
       --color-surface: #ffffff;
@@ -24,7 +24,7 @@
       --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
       --transition: 0.25s ease;
     }
- 
+
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--color-bg);
@@ -32,19 +32,19 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
- 
+
     .widget-container {
       max-width: 960px;
       margin: 0 auto;
       padding: 24px 20px;
     }
- 
+
     /* ---- HEADER ---- */
     .widget-header {
       text-align: center;
       margin-bottom: 32px;
     }
- 
+
     .widget-header h1 {
       font-size: 1.75rem;
       font-weight: 700;
@@ -52,14 +52,14 @@
       margin-bottom: 8px;
       letter-spacing: -0.02em;
     }
- 
+
     .widget-header .subtitle {
       font-size: 0.95rem;
       color: var(--color-text-secondary);
       max-width: 640px;
       margin: 0 auto;
     }
- 
+
     /* ---- OVERVIEW ---- */
     .overview-section {
       background: var(--color-surface);
@@ -69,19 +69,19 @@
       margin-bottom: 28px;
       box-shadow: var(--shadow-sm);
     }
- 
+
     .overview-section h2 {
       font-size: 1.1rem;
       font-weight: 600;
       margin-bottom: 12px;
       color: var(--color-accent);
     }
- 
+
     .overview-section p {
       font-size: 0.925rem;
       color: var(--color-text-secondary);
     }
- 
+
     /* ---- TABS ---- */
     .tabs-wrapper {
       background: var(--color-surface);
@@ -91,7 +91,7 @@
       overflow: hidden;
       margin-bottom: 28px;
     }
- 
+
     .tab-bar {
       display: flex;
       background: #f0f3f7;
@@ -101,9 +101,9 @@
       padding: 8px 8px 0 8px;
       gap: 4px;
     }
- 
+
     .tab-bar::-webkit-scrollbar { display: none; }
- 
+
     .tab-btn {
       flex: 1;
       min-width: 0;
@@ -121,12 +121,12 @@
       text-align: center;
       letter-spacing: 0.01em;
     }
- 
+
     .tab-btn:hover {
       background: #cdd6e2;
       color: var(--color-accent);
     }
- 
+
     .tab-btn.active {
       background: #ffffff;
       color: var(--color-accent);
@@ -134,28 +134,28 @@
       font-size: 0.95rem;
       box-shadow: 0 -2px 0 var(--color-accent) inset;
     }
- 
+
     /* ---- TAB CONTENT ---- */
     .tab-content {
       display: none;
       padding: 28px;
       animation: fadeIn 0.3s ease;
     }
- 
+
     .tab-content.active { display: block; }
- 
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
     }
- 
+
     .tab-content h3 {
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 14px;
       color: var(--color-text);
     }
- 
+
     .tab-hero-img {
       width: 100%;
       max-height: 300px;
@@ -164,13 +164,13 @@
       margin-bottom: 18px;
       display: block;
     }
- 
+
     .tab-content p {
       font-size: 0.925rem;
       color: var(--color-text-secondary);
       margin-bottom: 16px;
     }
- 
+
     /* Mitigation box */
     .mitigation-box {
       background: var(--color-accent-light);
@@ -179,7 +179,7 @@
       padding: 18px 20px;
       margin: 20px 0;
     }
- 
+
     .mitigation-box h4 {
       font-size: 0.85rem;
       font-weight: 600;
@@ -188,19 +188,19 @@
       color: var(--color-accent);
       margin-bottom: 8px;
     }
- 
+
     .mitigation-box ul {
       list-style: none;
       padding: 0;
     }
- 
+
     .mitigation-box li {
       font-size: 0.9rem;
       color: var(--color-text-secondary);
       padding: 4px 0 4px 20px;
       position: relative;
     }
- 
+
     .mitigation-box li::before {
       content: '✓';
       position: absolute;
@@ -208,7 +208,7 @@
       color: var(--color-accent);
       font-weight: 700;
     }
- 
+
     /* Warning callout (for red flags) */
     .warning-box {
       background: var(--color-warning-bg);
@@ -217,7 +217,7 @@
       padding: 18px 20px;
       margin: 20px 0;
     }
- 
+
     .warning-box h4 {
       font-size: 0.85rem;
       font-weight: 600;
@@ -226,30 +226,30 @@
       color: var(--color-warning);
       margin-bottom: 8px;
     }
- 
+
     .warning-box ul {
       list-style: none;
       padding: 0;
     }
- 
+
     .warning-box li {
       font-size: 0.9rem;
       color: var(--color-text-secondary);
       padding: 4px 0 4px 20px;
       position: relative;
     }
- 
+
     .warning-box li::before {
       content: '⚠';
       position: absolute;
       left: 0;
     }
- 
+
     /* Videos grid */
     .videos-section {
       margin-top: 24px;
     }
- 
+
     .videos-section h4 {
       font-size: 0.85rem;
       font-weight: 600;
@@ -258,14 +258,14 @@
       color: var(--color-text);
       margin-bottom: 12px;
     }
- 
+
     .video-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
       justify-content: center;
     }
- 
+
     .video-card {
       border-radius: var(--radius);
       overflow: hidden;
@@ -274,14 +274,14 @@
       width: 300px;
       flex-shrink: 0;
     }
- 
+
     .video-card iframe {
       width: 300px;
       height: 533px;
       display: block;
       border: none;
     }
- 
+
     .video-card .video-label {
       background: var(--color-surface);
       padding: 10px 14px;
@@ -289,7 +289,7 @@
       font-weight: 500;
       color: var(--color-text-secondary);
     }
- 
+
     /* Example links (non-video) */
     .example-links {
       margin-top: 16px;
@@ -298,7 +298,7 @@
       border-radius: var(--radius);
       padding: 16px 18px;
     }
- 
+
     .example-links-label {
       font-size: 0.75rem;
       font-weight: 700;
@@ -307,7 +307,7 @@
       color: var(--color-text-secondary);
       margin-bottom: 10px;
     }
- 
+
     .example-links a {
       display: flex;
       align-items: center;
@@ -319,31 +319,31 @@
       border-bottom: 1px solid var(--color-border);
       transition: color var(--transition);
     }
- 
+
     .example-links a:last-child {
       border-bottom: none;
       padding-bottom: 0;
     }
- 
+
     .example-links a:first-of-type {
       padding-top: 0;
     }
- 
+
     .example-links a::before {
       content: '→';
       font-size: 0.85rem;
       flex-shrink: 0;
     }
- 
+
     .example-links a:hover {
       color: #1a4f75;
     }
- 
+
     /* Resource links */
     .resource-links {
       margin-top: 16px;
     }
- 
+
     .resource-links h4 {
       font-size: 0.85rem;
       font-weight: 600;
@@ -352,7 +352,7 @@
       color: var(--color-text);
       margin-bottom: 8px;
     }
- 
+
     .resource-links a {
       display: inline-block;
       font-size: 0.85rem;
@@ -364,12 +364,12 @@
       margin: 4px 4px 4px 0;
       transition: background var(--transition), border-color var(--transition);
     }
- 
+
     .resource-links a:hover {
       background: var(--color-accent-light);
       border-color: var(--color-accent);
     }
- 
+
     /* ---- PHOTO OVERLAY PLACEHOLDER ---- */
     .photo-overlay-section {
       background: var(--color-surface);
@@ -379,7 +379,7 @@
       overflow: hidden;
       margin-bottom: 28px;
     }
- 
+
     .photo-overlay-placeholder {
       position: relative;
       background: linear-gradient(135deg, #dde8f0 0%, #c3d5e3 100%);
@@ -392,18 +392,18 @@
       text-align: center;
       padding: 40px 24px;
     }
- 
+
     .photo-overlay-placeholder .mountain-icon {
       font-size: 3rem;
       opacity: 0.5;
     }
- 
+
     .photo-overlay-placeholder p {
       font-size: 0.95rem;
       color: #4a6a80;
       font-weight: 500;
     }
- 
+
     .photo-overlay-placeholder .coming-soon-badge {
       display: inline-block;
       background: rgba(255,255,255,0.7);
@@ -415,7 +415,7 @@
       letter-spacing: 0.06em;
       color: var(--color-accent);
     }
- 
+
     /* ---- FOOTER ---- */
     .widget-footer {
       text-align: center;
@@ -423,12 +423,12 @@
       font-size: 0.78rem;
       color: #999;
     }
- 
+
     .widget-footer a {
       color: var(--color-accent);
       text-decoration: none;
     }
- 
+
     /* ---- RESPONSIVE ---- */
     @media (max-width: 640px) {
       .widget-container { padding: 16px 12px; }
@@ -442,15 +442,15 @@
   </style>
 </head>
 <body>
- 
+
 <div class="widget-container">
- 
+
   <!-- Header -->
   <div class="widget-header">
     <h1>Springtime Mountain Hazards</h1>
     <p class="subtitle">A guide to identifying and mitigating seasonal hazards in the Presidential Range, New Hampshire</p>
   </div>
- 
+
   <!-- Overview -->
   <div class="overview-section">
     <h2>Overview</h2>
@@ -458,7 +458,7 @@
       As winter transitions to spring each year, warmer temperatures, stronger sunlight, and the shift from snow to rain create a new set of mountain hazards. Though the threat of avalanches begins to decrease, these springtime hazards are just as dangerous and have contributed to hundreds of accidents and near-misses over the years. Knowing how to identify, plan for, and avoid these hazards can greatly reduce your risk when traveling in the mountains.
     </p>
   </div>
- 
+
   <!-- Tabs Widget -->
   <div class="tabs-wrapper">
     <div class="tab-bar" role="tablist">
@@ -468,7 +468,7 @@
       <button class="tab-btn" role="tab" data-tab="undermined" aria-selected="false">Undermined Snow</button>
       <button class="tab-btn" role="tab" data-tab="wet" aria-selected="false">Wet Avalanches</button>
     </div>
- 
+
     <!-- Icefall & Rockfall -->
     <div class="tab-content active" id="tab-icefall" role="tabpanel">
       <h3>Icefall &amp; Rockfall</h3>
@@ -479,7 +479,7 @@
       <p>
         "Lunch Rocks" is one of the most dangerous places in Tuckerman Ravine in the spring due to icefall exposure, but this hazard is possible anywhere with steep slopes and exposed ice or rock overhead.
       </p>
- 
+
       <div class="warning-box">
         <h4>Red Flags</h4>
         <ul>
@@ -489,7 +489,7 @@
           <li>Other parties traveling above you on ice or rock, as their movement could trigger a release.</li>
         </ul>
       </div>
- 
+
       <div class="mitigation-box">
         <h4>Identification &amp; Mitigation</h4>
         <ul>
@@ -499,7 +499,7 @@
           <li>Wear a helmet in steep terrain.</li>
         </ul>
       </div>
- 
+
       <div class="videos-section">
         <h4>Examples</h4>
         <div class="video-grid">
@@ -515,7 +515,7 @@
         </div>
       </div>
     </div>
- 
+
     <!-- Glide Cracks / Snow Holes -->
     <div class="tab-content" id="tab-glide" role="tabpanel">
       <h3>Glide Cracks &amp; Snow Holes</h3>
@@ -526,7 +526,7 @@
       <p>
         Sometimes resembling crevasses found on glaciers, these features have been a factor in several serious accidents over the years.
       </p>
- 
+
       <div class="warning-box">
         <h4>Red Flags</h4>
         <ul>
@@ -536,7 +536,7 @@
           <li>Cracking or settling sounds underfoot near rocky terrain or drainage gullies.</li>
         </ul>
       </div>
- 
+
       <div class="mitigation-box">
         <h4>Identification &amp; Mitigation</h4>
         <ul>
@@ -546,7 +546,7 @@
           <li>Fresh unsupportive snow can mask the openings, making them invisible from the surface.</li>
         </ul>
       </div>
- 
+
       <div class="videos-section">
         <h4>Examples</h4>
         <div class="video-grid">
@@ -562,7 +562,7 @@
         </div>
       </div>
     </div>
- 
+
     <!-- Refrozen Snow Surfaces -->
     <div class="tab-content" id="tab-refrozen" role="tabpanel">
       <h3>Refrozen Snow Surfaces</h3>
@@ -573,7 +573,7 @@
       <p>
         When refrozen, the snow surface becomes very hard, icy, and slippery. In steep terrain, a fall can be impossible to stop or steer, and high-speed, long-sliding falls are a contributing factor in many accidents and near-misses every year.
       </p>
- 
+
       <div class="warning-box">
         <h4>Red Flags</h4>
         <ul>
@@ -583,7 +583,7 @@
           <li>A slope that was previously soft and is now glazed over or hardened after cooling temperatures.</li>
         </ul>
       </div>
- 
+
       <div class="mitigation-box">
         <h4>Identification &amp; Mitigation</h4>
         <ul>
@@ -593,7 +593,7 @@
           <li>Be aware of the limitations of self-arresting with an ice axe on hard, refrozen surfaces.</li>
         </ul>
       </div>
- 
+
       <div class="videos-section">
         <h4>Examples</h4>
         <div class="video-grid">
@@ -608,7 +608,7 @@
           <a href="https://www.mountwashingtonavalanchecenter.org/two-long-sliding-falls-on-a-frozen-spring-snowpack/" target="_blank" rel="noopener">Long Sliding Fall in Chute, Tuckerman Ravine</a>
         </div>
       </div>
- 
+
       <div class="resource-links">
         <h4>Resources</h4>
         <a href="https://www.mountwashington.org/experience-the-weather/higher-summit-forecast.aspx" target="_blank" rel="noopener">Higher Summits Forecast</a>
@@ -616,7 +616,7 @@
         <a href="https://blog.caltopo.com/2014/02/16/wheres-the-sun/" target="_blank" rel="noopener">CalTopo Sun Exposure</a>
       </div>
     </div>
- 
+
     <!-- Undermined Snow -->
     <div class="tab-content" id="tab-undermined" role="tabpanel">
       <h3>Undermined Snow</h3>
@@ -627,7 +627,7 @@
       <p>
         This hazard commonly forms where rivers, small streams, or runoff areas exist. A snow bridge could collapse on the first boot track or the 500th, and they can even collapse spontaneously.
       </p>
- 
+
       <div class="warning-box">
         <h4>Red Flags</h4>
         <ul>
@@ -637,7 +637,7 @@
           <li>Late season (April and beyond) when snowmelt runoff increases significantly.</li>
         </ul>
       </div>
- 
+
       <div class="mitigation-box">
         <h4>Identification &amp; Mitigation</h4>
         <ul>
@@ -647,7 +647,7 @@
           <li>Give obvious or suspected areas a wide margin. The timing of failure is unpredictable.</li>
         </ul>
       </div>
- 
+
       <div class="videos-section">
         <h4>Examples</h4>
         <div class="example-links">
@@ -657,7 +657,7 @@
         </div>
       </div>
     </div>
- 
+
     <!-- Wet Avalanches -->
     <div class="tab-content" id="tab-wet" role="tabpanel">
       <h3>Wet Avalanches</h3>
@@ -668,7 +668,7 @@
       <p>
         As spring progresses, regular loose wet avalanches and sluffs eat away at the snowpack and create deep runnels or trenches, adding an additional obstacle for skiers and climbers.
       </p>
- 
+
       <div class="warning-box">
         <h4>Red Flags</h4>
         <ul>
@@ -678,7 +678,7 @@
           <li>Afternoon hours after prolonged strong sun, when solar radiation has had time to penetrate deep into the snowpack.</li>
         </ul>
       </div>
- 
+
       <div class="mitigation-box">
         <h4>Identification &amp; Mitigation</h4>
         <ul>
@@ -688,9 +688,15 @@
           <li>Expect loose wet avalanches to have significant power when moving across your path; try to avoid the main flow.</li>
         </ul>
       </div>
- 
+
       <div class="videos-section">
         <h4>Examples</h4>
+        <div class="video-grid">
+          <div class="video-card">
+            <iframe width="100%" src="https://www.youtube.com/embed/bzW6pe6yMyI" title="Wet Avalanche in Tuckerman Ravine" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="video-label">Wet Avalanche in Tuckerman Ravine</div>
+          </div>
+        </div>
         <div class="example-links">
           <div class="example-links-label">Reports &amp; Examples</div>
           <a href="https://mwacarchived.wpenginepowered.com/all-observations/entry/5784/" target="_blank" rel="noopener">Wet Slab Avalanche</a>
@@ -699,41 +705,41 @@
       </div>
     </div>
   </div>
- 
+
   <!-- Footer -->
   <div class="widget-footer">
     Content sourced from <a href="https://www.mountwashingtonavalanchecenter.org" target="_blank" rel="noopener">Mount Washington Avalanche Center</a>
   </div>
- 
+
 </div>
- 
+
 <script>
   // Tab switching
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tabContents = document.querySelectorAll('.tab-content');
- 
+
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.getAttribute('data-tab');
- 
+
       tabBtns.forEach(b => {
         b.classList.remove('active');
         b.setAttribute('aria-selected', 'false');
       });
       tabContents.forEach(c => c.classList.remove('active'));
- 
+
       btn.classList.add('active');
       btn.setAttribute('aria-selected', 'true');
       document.getElementById('tab-' + target).classList.add('active');
     });
   });
- 
+
   // Keyboard navigation for tabs
   const tabBar = document.querySelector('.tab-bar');
   tabBar.addEventListener('keydown', (e) => {
     const tabs = Array.from(tabBtns);
     const currentIndex = tabs.indexOf(document.activeElement);
- 
+
     if (e.key === 'ArrowRight') {
       e.preventDefault();
       const next = (currentIndex + 1) % tabs.length;
@@ -747,6 +753,6 @@
     }
   });
 </script>
- 
+
 </body>
 </html>
